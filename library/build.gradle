@@ -4,6 +4,15 @@ plugins {
     id 'org.jetbrains.dokka'
 }
 
+ext {
+    PUBLISH_GROUP_ID = 'com.cesarvaliente.dokka_sample.library'
+    PUBLISH_ARTIFACT_ID = 'library'
+    LIBRARY_DESCRIPTION = "Sample library used to generate Kotlin docs from its source code"
+    LIBRARY_VERSION = android.defaultConfig.versionName
+}
+
+apply from: "${rootProject.projectDir}/publishing.gradle"
+
 android {
     compileSdk 31
 
@@ -11,7 +20,7 @@ android {
         minSdk 29
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "1.0-test01"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,13 +37,5 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-}
-
-dokkaHtml.configure {
-    dokkaSourceSets {
-        named("main") {
-            noAndroidSdkLink.set(false)
-        }
     }
 }
