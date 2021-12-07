@@ -68,4 +68,3 @@ jobs:
           SIGNING_KEY_ID: ${{ secrets.SIGNING_KEY_ID }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
           SIGNING_SECRET_FILE: ${{ secrets.SIGNING_SECRET_FILE }}
-          

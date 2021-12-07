@@ -8,7 +8,7 @@ ext {
     PUBLISH_GROUP_ID = 'com.cesarvaliente.dokka_sample.library'
     PUBLISH_ARTIFACT_ID = 'library'
     LIBRARY_DESCRIPTION = "Sample library used to generate Kotlin docs from its source code"
-    LIBRARY_VERSION = android.defaultConfig.versionName
+    LIBRARY_VERSION = "1.0-test01"
 }
 
 apply from: "${rootProject.projectDir}/publishing.gradle"
